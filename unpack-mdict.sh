@@ -1,13 +1,15 @@
-#!/bin/bash
-
-# Install dependency with:
-# pip3 install mdict-utils
-if [[ "x" == "x$1" ]]; then
-    printf "\n\nUSAGE: `basename $0` dictionary.dsl\n"
-    exit 1
-fi
-
-src="$1"
+#!/usr/bin/env python3
+# 
+# Dependencies:
+# python3, mdict-utils, which
+# 
+# Install all dependencies with:
+# pip3 install mdict-utils python-lzo
+#
+# pyglossary better to be installed from a local folder with: python setup.py install (better to use my ready pyglossary zip file)
+#
+src=""
+read -p "Input file (ex. dictionary.mdx): " src
 
 if [ -f "${src%.*}.mdd" ]; then
     mdict -x "${src%.*}.mdd" -d "./${src%.*}.cache_res"
@@ -30,5 +32,10 @@ if [ -e "${src%.*}.mtxt" ]; then
 fi
 
 mv "${src%.*}.mdx.txt" "${src%.*}.mtxt"
+
+
+
 rm -v "${src%.*}.mdx.title.html"
 rm -v "${src%.*}.mdx.description.html"
+
+echo 'All done!'
