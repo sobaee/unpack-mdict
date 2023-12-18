@@ -6,4 +6,4 @@ N.B: MDX file will be extracted to octopus mdict source format .mtxt file, while
 
 ## USAGE:
 
-Navigate to the directory that contains this bash script (or python script) and copy the files MDX or MDD to the same directory, and run this command: `bash unpack-mdict.sh` or `python unpack-mdict.py`
+Navigate to the directory that contains this script and copy the files MDX or MDD to the same directory, and run this command: `bash unpack-mdict.sh` or `python unpack-mdict.py`
