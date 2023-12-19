@@ -4,8 +4,8 @@
 This is a python script to automatically extract or unpack the MDICT MDX (with MDD resources if available) using mdict-utils python tool.
 
 <br />
-<br />
-## DEPENDENCIES:
+## DEPENDENCIES:  
+
 python3, mdict-utils, python-lzo
 
 <br />
